@@ -1,0 +1,39 @@
+﻿@model IEnumerable<WescrapDataprj_1.web.Models.Job>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+<div class="container">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <div class="panel-title">
+                <h3>Job Offers</h3>
+
+            </div>
+        </div>
+        <div class="panel-body">
+            <table class="table table-responsive">
+                <thead>
+                    <tr>
+                        <th>Company</th>
+                        <th>Job Offres</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   @foreach (var item in Model)
+                    {
+                        <tr>
+                        <td><img src="@item.Img" style="width:80px;height:80px"/></td>
+                        <td>@item.Title </td>
+                        <td>@item.Details</td>
+                        </tr>                       
+                    }
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+</div>
